@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+  knn_model:
+    working_directory: ~/project
+    docker:
+      -image: circleci/python:3.7.2
+    steps:
+      - checkout
+      - run:
+          name: Running Training
+          command: |
+            virtualenv venv
+            . venv/bin/activate
+            pip instal --upgrade pip
+            pip instal -r Breast_Cancer-Classification/requirements.txt
+            train.py -vv Breast_Cancer-Classification
+workflows:
+  version: 2.1
+    jobs:
+      - knn_model
