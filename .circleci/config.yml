@@ -16,6 +16,5 @@ jobs:
             train.py -vv Breast_Cancer-Classification
 workflows:
   version: 2.1
-    test-all:
     jobs:
       - knn_model
