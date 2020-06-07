@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    {% from "includes/formhelpers.html" import render_field %}
+
+
+    <h3>Prediction Malignant : {{ pred_malignant }}</h3>
+    <h3>Prediction Benign    : {{ pred_benign }}</h3>
+    <hr>
+
+        <form method="post">
+            <div class="row">
+                <div class="col-sm-2">
+                {{ render_field(form.radius_mean, class = "form-control") }}
+                {{ render_field(form.texture_mean, class = "form-control") }}
+                {{ render_field(form.perimeter_mean, class = "form-control") }}
+                {{ render_field(form.area_mean, class = "form-control") }}
+                {{ render_field(form.smoothness_mean, class = "form-control") }}
+                {{ render_field(form.compactness_mean, class = "form-control") }}
+                </div>
+
+                <div class="col-sm-3">
+                {{ render_field(form.concavity_mean, class = "form-control") }}
+                {{ render_field(form.concave_points_mean, class = "form-control") }}
+                {{ render_field(form.symmetry_mean, class = "form-control") }}
+                {{ render_field(form.fractal_dimension_mean, class = "form-control") }}
+                {{ render_field(form.radius_se, class = "form-control") }}
+                {{ render_field(form.texture_se, class = "form-control") }}
+                </div>
+
+                <div class="col-sm-2">
+                {{ render_field(form.perimeter_se, class = "form-control") }}
+                {{ render_field(form.area_se, class = "form-control") }}
+                {{ render_field(form.smoothness_se, class = "form-control") }}
+                {{ render_field(form.compactness_se, class = "form-control") }}
+                {{ render_field(form.concavity_se, class = "form-control") }}
+                {{ render_field(form.concave_points_se, class = "form-control") }}
+                </div>
+
+                <div class="col-sm-2">
+                {{ render_field(form.symmetry_se, class = "form-control") }}
+                {{ render_field(form.fractal_dimension_se, class = "form-control") }}
+                {{ render_field(form.radius_worst, class = "form-control") }}
+                {{ render_field(form.texture_worst, class = "form-control") }}
+                {{ render_field(form.perimeter_worst, class = "form-control") }}
+                {{ render_field(form.area_worst, class = "form-control") }}
+                </div>
+
+                <div class="col-sm-2">
+                {{ render_field(form.smoothness_worst, class = "form-control") }}
+                {{ render_field(form.compactness_worst, class = "form-control") }}
+                {{ render_field(form.concavity_worst, class = "form-control") }}
+                {{ render_field(form.concave_points_worst, class = "form-control") }}
+                {{ render_field(form.symmetry_worst, class = "form-control") }}
+                {{ render_field(form.fractal_dimension_worst, class = "form-control") }}
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+
+
+{% endblock %}

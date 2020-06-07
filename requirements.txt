@@ -1,0 +1,15 @@
+# Model Building Requirements
+numpy==1.18.4
+pandas==1.0.4
+scikit-learn==0.23.1
+joblib==0.15.1
+
+# testing requirements
+pytest==5.4.2
+
+# packaging
+setuptools==41.6.0
+
+# Rest API
+flask == 1.1.2
+WTForms==2.3.1
