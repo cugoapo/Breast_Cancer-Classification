@@ -1,5 +1,4 @@
 import config
-
 import preprocess as pf
 from predict import predict
 
