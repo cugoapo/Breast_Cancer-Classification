@@ -1,0 +1,7 @@
+version: "2"
+services:
+  app:
+    build: ./app
+    container_name: "Breast_Cancer_Classifier"
+    ports:
+      - "5000:5000"

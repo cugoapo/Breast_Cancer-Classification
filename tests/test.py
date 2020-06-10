@@ -15,3 +15,4 @@ def test_make_single_prediction():
     assert subject is not None
     assert isinstance(subject[0], str)
     assert (subject[0]) == "M"
+

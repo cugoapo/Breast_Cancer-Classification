@@ -98,7 +98,7 @@ def prediction():
         pred_malignant = prediction[1][0][1]
         pred_benign = prediction[1][0][0]
 
-        return render_template("prediction.html", pred_malignant="% {:.2f}".format(pred_malignant*100),
+        return render_template("prediction.html", pred_malignant="% {:.2f}".format(pred_malignant * 100),
                                pred_benign="% {:.2f}".format(pred_benign*100), form=form)
     else:
 
