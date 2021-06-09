@@ -18,7 +18,7 @@ numpy==1.18.4
 packaging==20.4
 pandas==1.0.4
 passlib==1.7.2
-pip==19.0.3
+pip==19.2
 pluggy==0.13.1
 py==1.8.1
 pyparsing==2.4.7
